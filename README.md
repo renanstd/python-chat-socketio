@@ -17,3 +17,6 @@ Feito com base [neste](https://codeburst.io/building-your-first-chat-application
 - Confira o chat em:
   - http://127.0.0.1:5000/
   
+# Todo
+
+- [ ] Adicionar persistência de informações

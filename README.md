@@ -19,4 +19,4 @@ Feito com base [neste](https://codeburst.io/building-your-first-chat-application
   
 # Todo
 
-- [ ] Adicionar persistência de informações
+- [ ] Persistir as informações trocadas no chat

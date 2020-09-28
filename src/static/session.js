@@ -1,6 +1,10 @@
 var protocol = window.location.protocol;
-var socket = io.connect(protocol + '//' + document.domain);
-// var socket = io.connect(protocol + '//' + document.domain + ':' + location.port);
+// Para funcionar no heroku, a string de conexão não pode ter porta:
+// E o protocolo deve ser HTTPS
+var conn_string = protocol + '//' + document.domain;
+// Para testes locais, use essa string:
+// var conn_string = protocol + '//' + document.domain + ':' + location.port;
+var socket = io.connect(conn_string);
 
 socket.on('connect', function() {
     socket.emit('my event', {

@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href={{ url_for('static', filename='session.css') }}>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
     <title>Flask chat App</title>
 </head>
 <body>
-    <h3>No message yet...</h3>
-    <div class="message_holder"></div>
+    <div class="ui middle aligned center grid">
+        <div class="column">
+            <h3 class="ui header center aligned">No message yet...</h3>
+            <div class="message_holder ui stacked segment"></div>
 
-    <form action="" method="POST">
-        <input type="text" name="username" class="username" placeholder="User Name"/>
-        <input type="text" name="message" class="message" placeholder="Messages"/>
-        <input type="submit" value="Send">
-    </form>
+            <form class="ui form" action="" method="POST">
+                <div class="ui stacked segment">
+                    <div class="field">
+                        <input type="text" name="username" class="username" placeholder="User Name"/>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="message" class="message" placeholder="Messages"/>
+                    </div>
+                    <div class="field">
+                        <input class="ui primary fluid button" type="submit" value="Send">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
     <script src={{ url_for('static', filename='session.js') }}></script>
 </body>

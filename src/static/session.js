@@ -1,6 +1,6 @@
 var protocol = window.location.protocol;
-console.log(protocol);
-var socket = io.connect(protocol + '//' + document.domain); //  + ':' + location.port
+var socket = io.connect(protocol + '//' + document.domain);
+// var socket = io.connect(protocol + '//' + document.domain + ':' + location.port);
 
 socket.on('connect', function() {
     socket.emit('my event', {

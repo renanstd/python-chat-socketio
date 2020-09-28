@@ -1,4 +1,5 @@
-var socket = io.connect('https://' + document.domain); //  + ':' + location.port
+var protocol = window.location.protocol;
+var socket = io.connect(protocol + '//' + document.domain); //  + ':' + location.port
 
 socket.on('connect', function() {
     socket.emit('my event', {
